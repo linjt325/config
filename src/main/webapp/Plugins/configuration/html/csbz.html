@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+	<center>
+		<div id="container"></div>
+	</center>
+
+	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.configuration.js"></script>
+	<script type="text/javascript">
+$(function(){
+	var p={
+			containerStyle:{	
+				background:"url(../images/4.png) white center center no-repeat"
+			},
+			points:[{
+				labels:[
+		              	{left:"10px",top:"10px",title:"流量:",name:"flow",unit:"MPa"},
+		            	{left:"10px",top:"30px",title:"压力:",name:"pressure",unit:"MPa"}
+		            	]
+			}]
+        };
+	$("#container").configuration(p);
+	/**
+	**/
+	$("#container").drawData([{
+		flow:"1",
+		pressure:"2"
+	}]);
+});
+</script>
+</body>
+</html>

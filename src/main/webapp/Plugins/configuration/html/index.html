@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery.configuration.js"></script>
+<script type="text/javascript">
+$(function(){
+	var p={
+			containerStyle:{	
+				background:"url(../images/4.png) white center center no-repeat"
+			},
+			labelStyle:{
+				color:"red"
+			},
+			points:[{
+				labels:[
+		              	{left:"10px",top:"10px",title:"压力:",name:"flow",unit:"MPa"},
+		            	{left:"10px",top:"30px",title:"压力:",name:"flow1",unit:"MPa"},
+		            	{left:"10px",top:"50px",title:"压力:",name:"flow2",unit:"MPa"},
+		            	{left:"10px",top:"70px",title:"开关:",name:"valve",format:function(value){if(value==0){var label=$(this).parent();label.empty();label.append($("<img height='20' src='https://www.baidu.com/img/baidu_jgylogo3.gif'/>"));}return value;}}
+		            	]
+			}]
+        };
+	$("body").configuration(p);
+	/**
+	**/
+	$("body").drawData([{
+		flow:"1.006",
+		flow1:"2.006",
+		flow2:"3.458",
+		valve:"0"
+	}]);
+});
+</script>
+</body>
+</html>

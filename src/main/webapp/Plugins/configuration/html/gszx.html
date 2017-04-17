@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.configuration.js"></script>
+	<script type="text/javascript">
+$(function(){
+	var p={
+			containerStyle:{	
+				background:"url(../images/2.png) white center center no-repeat"
+			},
+			points:[{
+				pointKey:"node",
+				labels:[
+		              	{left:"10px",top:"10px",title:"压力:",name:"flow",unit:"MPa"},
+		            	{left:"10px",top:"30px",title:"压力:",name:"flow1",unit:"MPa"}
+		            	]
+			}]
+        };
+	$("body").configuration(p);
+	/**
+	**/
+	$("body").drawData([{
+    	pointKey:"node",
+		flow:"1",
+		flow1:"2"
+	}]);
+});
+</script>
+</body>
+</html>
